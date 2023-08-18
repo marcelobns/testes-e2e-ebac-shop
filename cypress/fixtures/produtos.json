@@ -1,0 +1,26 @@
+[
+    {
+        "nome": "Abominable Hoodie",
+        "tamanho": "M",
+        "cor": "Green",
+        "quantidade": 4
+    },
+    {
+        "nome": "Oslo Trek Hoodie",
+        "tamanho": "M",
+        "cor": "Brown",
+        "quantidade": 3
+    },
+    {
+        "nome": "Hero Hoodie",
+        "tamanho": "M",
+        "cor": "Green",
+        "quantidade": 2
+    },
+    {
+        "nome": "Hollister Backyard Sweatshirt",
+        "tamanho": "M",
+        "cor": "White",
+        "quantidade": 1
+    }
+]

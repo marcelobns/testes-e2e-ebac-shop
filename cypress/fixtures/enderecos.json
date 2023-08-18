@@ -1,0 +1,22 @@
+{
+    "endereco_cobranca" :
+    {
+        "cep" : "00000000",
+        "logradouro" : "Rua Teste",
+        "numero" : "123",
+        "complemento" : "Casa",
+        "bairro" : "Centro",
+        "cidade" : "São Paulo",
+        "estado" : "SP"
+    },
+    "endereco_entrega" :
+    {
+        "cep" : "00000000",
+        "logradouro" : "Rua Teste",
+        "numero" : "123",
+        "complemento" : "Casa",
+        "bairro" : "Centro",
+        "cidade" : "São Paulo",
+        "estado" : "SP"
+    }
+}
