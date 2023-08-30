@@ -22,7 +22,7 @@ context('Funcionalidade Login', () => {
     });
 
     it('Login usando fixture', () => {
-        cy.fixture('perfil').then((dados) => {
+        cy.fixture('usuario').then((dados) => {
             cy.login(dados.username, dados.password)
         })
         cy.get('.page-title').should('contain', 'Minha conta')

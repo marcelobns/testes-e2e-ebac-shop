@@ -25,7 +25,6 @@ describe('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-        
         produtos.forEach(produto => {
             
             cy.produtoAddCart({...produto})
