@@ -35,7 +35,7 @@ describe('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             cy.get('.dropdown-toggle > .mini-cart-items').should('contain', carrinho);
         });
 
-        cy.get('.dropdown-toggle > .text-skin > .icon-basket').click().click();
+        cy.get('.dropdown-toggle > .text-skin > .icon-basket').click().click({ force: true });
         cy.get('#cart .buttons > .checkout').click();
         cy.get('.showlogin').click();
 
