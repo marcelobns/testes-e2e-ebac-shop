@@ -3,8 +3,8 @@ let dadosLogin
 
 context('Funcionalidade Login', () => {
     before(() => {
-        cy.fixture('perfil').then(perfil => {
-            dadosLogin = perfil
+        cy.fixture('usuario').then(usuario => {
+            dadosLogin = usuario
         })
     });
 
@@ -17,20 +17,20 @@ context('Funcionalidade Login', () => {
     });
 
     it('Login com sucesso usando Comando customizado', () => {
-        cy.login(dadosLogin.usuario, dadosLogin.senha)
+        cy.login(dadosLogin.username, dadosLogin.password)
         cy.get('.page-title').should('contain', 'Minha conta')
     });
 
     it('Login usando fixture', () => {
         cy.fixture('perfil').then((dados) => {
-            cy.login(dados.usuario, dados.senha)
+            cy.login(dados.username, dados.password)
         })
         cy.get('.page-title').should('contain', 'Minha conta')
     });
 
     it('Deve fazer login com sucesso - sem otimização', () => {
-        cy.get('#username').type(dadosLogin.usuario)
-        cy.get('#password').type(dadosLogin.senha, { log: false })
+        cy.get('#username').type(dadosLogin.username)
+        cy.get('#password').type(dadosLogin.password, { log: false })
         cy.get('.woocommerce-form > .button').click()
         cy.get('.page-title').should('contain', 'Minha conta')
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, aluno_ebac')
