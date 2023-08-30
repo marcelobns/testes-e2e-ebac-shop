@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clona o Repositório') {
+            steps {
+                git branch: 'main', 
+                url: 'https://github.com/marcelobns/testes-e2e-ebac-shop.git'
+            }
+        }
+        stage('Instala as Dependências') {
+            steps {
+                sh 'npm ci'
+            }
+        }
+        stage('Executa os Testes de Integração') {
+            steps {
+                sh 'NO_COLOR=1 npm run cy:run'
+            }
+        }
+    }
+}
